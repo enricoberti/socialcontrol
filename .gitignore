@@ -1,0 +1,17 @@
+# OS X nonsense
+.DS_Store
+._*
+
+# vim tmp files
+.*.swp
+.*.swo
+
+# emacs backup files
+.*~
+
+# Webstorm project files
+.idea/
+*.iml
+
+# Node modules
+node_modules/

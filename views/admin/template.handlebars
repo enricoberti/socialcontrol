@@ -1,0 +1,57 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <title>{{title}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" media="screen">
+		<link href="../css/admin.css" rel="stylesheet" media="screen">
+		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+		{{> head}}
+	</head>
+	<body>
+		{{> body}}
+		
+		<div class="row-fluid">
+			<div class="span12">
+				<footer class="text-center">
+					<!--<small>Footer Here</small>-->
+				</footer>
+			</div>
+		</div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+			// Load the templates used by the admin pages.
+			$.ajax({
+				url: '/api/admin/templates',
+				method: 'GET',
+				success: function(response) {
+					$('footer').after(response);
+				},
+				error: function(ex) {
+					console.log(ex);
+				},
+				complete: function() {}
+			});
+		</script>
+		{{> script}}
+	</body>
+</html>
+

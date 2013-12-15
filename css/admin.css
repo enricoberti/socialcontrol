@@ -1,0 +1,51 @@
+/*!
+ * Socialcontrol
+ *
+ * Copyright 2013 Enrico Berti and other contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+body {
+  margin-top: 60px;
+}
+
+.signin-form {
+  margin-top: 20px;
+}
+
+.signin-form .alert {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1.logo {
+  font-size: 44px;
+  text-align: center;
+}
+
+.brand {
+  font-family: 'Lobster', cursive;
+}
+
+.form-horizontal .control-label {
+  width: 70px;
+}
+
+.form-horizontal .controls {
+  margin-left: 90px;
+}
+
+.tweets-table {
+  width: 100%;
+}
+
+.tweets-table tbody td {
+  vertical-align: text-top;
+}
+
+#tweetsModal {
+  width: 900px;
+  margin-left: -450px;
+}

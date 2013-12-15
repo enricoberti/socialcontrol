@@ -1,0 +1,26 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<div class="container signin-form">
+	<div class="row">
+		<div class="span4 offset4 well">
+			<h1 class="logo lobster azure">Socialcontrol</h1>
+			{{#error}}
+			<div class="alert alert-error">
+				<a class="close" data-dismiss="alert" href="#">&times;</a>{{.}}
+			</div>
+			{{/error}}
+			
+			<form method="POST" action="login" accept-charset="UTF-8">
+				<input type="text" id="username" class="span4" name="username" placeholder="Username">
+				<input type="password" id="password" class="span4" name="password" placeholder="Password">
+				<button type="submit" name="submit" class="btn btn-info btn-block btn-large">Sign in</button>
+			</form>
+		</div>
+	</div>
+</div>

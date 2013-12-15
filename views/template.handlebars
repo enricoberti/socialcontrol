@@ -1,0 +1,66 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <title>{{title}}</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="Description for Socialcontrol here.">
+	    <meta name="author" content="Enrico Berti - hello@enricoberti.com">
+	    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+		  <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		  <link href="/css/style.css" rel="stylesheet" />
+
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+		{{> head}}
+	</head>
+	<body>
+
+		<div class="container-fluid">
+		
+			{{! Body partial should start with div using 'row-fluid'. }}
+			{{> body}}
+
+			<div class="row-fluid">
+				<div class="span12">
+					<footer class="text-center">
+					</footer>
+				</div>
+			</div>
+
+		</div>			
+		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  // Load client-side templates.
+        $.ajax({
+          url: '/api/templates',
+          method: 'GET',
+          success: function(response) {
+            $('footer').after(response);
+          },
+          error: function(ex) {
+            console.log(ex);
+          },
+          complete: function() {}
+        });
+			});
+		</script>
+		{{> script}}
+
+	</body>
+</html>
+

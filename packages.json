@@ -1,0 +1,19 @@
+/*!
+ * Socialcontrol
+ *
+ * Copyright 2013 Enrico Berti and other contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+{
+  "name": "socialcontrol",
+  "description": "A project to track Twitter members and groups",
+  "author": "Enrico Berti <hello@enricoberti.com>",
+  "dependencies": {
+    "forever": "0.x.x",
+    "express": "2.3.x",
+    "mongodb": "1.x.x"
+  },
+  "engine": "node >= 0.4.1"
+}

@@ -1,0 +1,40 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<!-- Handlebars templates used for client-side rendering.
+	 We are unable to include these as part of the regular .ms/.hbs files as the {{mustache}} will be rendered away.
+-->
+
+<script id="adminTweetTemplate" type="text/x-handlebars-template">
+	<table class="table table-striped table-hover tweets-table">
+		<thead>
+			<tr>
+				<th>Timestamp</th>
+				<th>Tweet</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#.}}
+			<tr id="{{id_str}}">
+				<td>{{created_display_short}}</td>
+				<td>{{{html}}}
+					<div class="pull-right">
+						<a href="#" class="deleteTweet" role="button" data-toggle="modal" data-tweetId="{{id_str}}"><i class="icon-remove"></i></a>
+					</div>
+				</td>
+			</tr>
+			{{/.}}
+			{{^.}}
+				<tr>
+					<td colspan="2">No tweets found</td>
+				</tr>
+			{{/.}}
+		</tbody>
+	</table>
+
+</script>

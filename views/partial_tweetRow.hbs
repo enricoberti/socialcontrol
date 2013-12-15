@@ -1,0 +1,30 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+
+{{! Template to render tweets on the default "tweet browser" page. }}
+
+{{#tweetRow tweets}}
+	<div class="span3">
+		<div class="avatar">
+			<img src="{{user.profile_image_url_https}}" class="img-rounded" />
+		</div>
+		<div class="tweet content">
+			<a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}"><small class="moment">{{{europeanDate created_at}}}</small></a><br />
+			<strong>{{user.name}} (<a href="#" data-name="{{user.name}}" data-screen_name="{{user.screen_name}}" onclick="searchTweets(this);">@{{user.screen_name}}</a>)</strong><br/>
+			{{{html}}}
+			<div class="clearfix"></div>
+			<div class="controls">
+				<a href="https://twitter.com/intent/retweet?tweet_id={{id_str}}" target="_blank"><i class="icon-retweet"></i></a>&nbsp;&nbsp;
+				<a href="https://twitter.com/intent/favorite?tweet_id={{id_str}}" target="_blank"><i class="icon-star-empty"></i></a>
+			</div>
+			<div class="group" data-shortcode="{{user.groupShortCode}}" data-name="{{user.group}}" onclick="searchTweets(this);">{{user.group}}</div>
+
+		</div>
+	</div>
+{{/tweetRow}}

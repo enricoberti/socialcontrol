@@ -1,0 +1,21 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<!-- Mustache/Handlebars templates used for client-side rendering.
+	 We are unable to include these as part of the regular .ms files as the {{mustache}} will be rendered away.
+-->
+
+<script id="searchTemplate" type="text/xhandlebars-template">
+	{{#members}}
+		<li><a tabindex="-1" href="#" data-screen_name="{{screen_name}}" data-name="{{name}}" onclick="searchTweets(this);"><strong>{{name}}</strong> (@{{screen_name}}) - {{groupName}}</a></li>
+	{{/members}}
+
+	{{#groups}}
+		<li><a tabindex="-1" href="#" data-shortcode="{{shortCode}}" data-name="{{name}}" onclick="searchTweets(this);"><strong>{{name}}</strong> - {{memberCount}} members</a></li>
+	{{/groups}}
+</script>

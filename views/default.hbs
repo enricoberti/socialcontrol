@@ -1,0 +1,35 @@
+<!--
+* Socialcontrol
+*
+* Copyright 2013 Enrico Berti and other contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+-->
+<div class="row-fluid">
+	<h1 class="logo lobster azure" style="display: inline-block"><a href="/">Socialcontrol</a></h1>
+	<div style="display: inline-block; margin-left:50px; vertical-align: top; margin-top: 16px">		
+		<div class="dropdown">
+			<button id="btnSearchToggle" style="display:none;" class="dropdown-toggle" data-toggle="dropdown"></button>
+			<input id="txtSearch" class="input-xxlarge" type="text" disabled="disabled" autocomplete="off" placeholder="Search for a member or group..."/>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="entitySearchMenu"></ul>
+		</div>
+
+	</div>
+</div>
+<div id="tweetContainer" class="container-fluid">
+	{{> tweets}}
+</div>
+
+<a id="next" href="#" style="display:none;">next page?</a>
+
+<!-- This is what will be displayed when more tweets are being retrieved. -->
+<div style="display:none;" id="loadingMsg">
+	<div style="text-align:center;margin:auto;" class="row-fluid">
+		<div class="span12">
+			<img src="/img/loading.gif" />&nbsp;&nbsp;Loading tweets...
+		</div>
+	</div>
+</div>
+
+ 
